@@ -1,0 +1,8 @@
+alert icmp any any -> $HOME_NET any (msg:"ICMP Ping Detected"; sid: 50001; rev:1;)
+alert icmp $EXTERNAL_NET any -> $HOME_NET any(msg:"ICMP Ping Detected"; sid: 50002; rev:1;)
+alert tcp any any -> $HOME_NET 24 (msg:"TELNET Connection Attempt Detected"; sid: 50003; rev:1;)
+alert tcp any any -> $HOME_NET 25 (msg:"SSH Connection Attempt Detected"; sid: 50004; rev:1;)
+alert ftp any any -> $HOME_NET 26 (msg:"FTP Connection Attempt Detected"; sid: 50005; rev:1;)
+alert smtp any any -> $HOME_NET 27 (msg:"SMTP Connection Attempt Detected"; sid: 50006; rev:1;)
+
+
